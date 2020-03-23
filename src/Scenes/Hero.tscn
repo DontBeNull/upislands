@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Hero Knight/HeroKnight.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Hero.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/HeroSprite.gd" type="Script" id=3]
+
+[node name="Hero" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="HeroSprite" type="Sprite" parent="."]
+position = Vector2( 2.74216, -3.29059 )
+texture = ExtResource( 1 )
+flip_h = true
+vframes = 9
+hframes = 10
+script = ExtResource( 3 )
+
+[node name="HeroCollision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14.4663, 21.292, 19.3061, 21.4617, 4.92714, -18.746, -0.703201, -18.746 )
